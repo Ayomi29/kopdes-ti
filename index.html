@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOPDES TI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Include Phosphor Icons for simple lightweight UI icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        /* Hide scrollbar for slider but allow scrolling */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-200 flex justify-center">
+
+    <!-- Main Container -->
+    <div class="w-full bg-gray-50 min-h-screen relative shadow-2xl overflow-x-hidden pb-24">
+        
+        <!-- Header Section (Red Background) -->
+        <div class="bg-gradient-to-br from-red-600 to-red-500 pt-6 pb-16 px-4 md:px-8 text-white rounded-b-[2.5rem] relative w-full">
+            <div class="max-w-5xl mx-auto">
+                <!-- Top Branding / Logo -->
+                <div class="flex justify-between items-center mb-6">
+                    <img src="logo.jpeg" alt="Logo Kopdes" class="h-10 w-auto rounded bg-white p-1 object-contain">
+                    <div class="flex gap-4">
+                        <div class="relative cursor-pointer hover:scale-110 transition-transform">
+                            <i class="ph-fill ph-chat-circle-dots text-2xl"></i>
+                            <span class="absolute -top-1 -right-1 bg-yellow-400 text-red-600 text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center border-2 border-red-500">1</span>
+                        </div>
+                        <div class="relative cursor-pointer hover:scale-110 transition-transform">
+                            <i class="ph-fill ph-bell text-2xl"></i>
+                            <span class="absolute -top-1 -right-1 bg-yellow-400 text-red-600 text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center border-2 border-red-500">9</span>
+                        </div>
+                        <i class="ph-fill ph-basket text-2xl cursor-pointer hover:scale-110 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Address Area & Search Bar (Grid for Desktop) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-end">
+                    <div class="mb-2 md:mb-0">
+                        <p class="text-xs text-red-100 mb-1">Alamat Pengiriman</p>
+                        <div class="flex items-center gap-2 cursor-pointer w-fit">
+                            <h2 class="font-bold text-lg leading-none">KANTOR</h2>
+                            <span class="bg-white text-red-600 text-[10px] font-bold px-2 py-0.5 rounded-full">Utama</span>
+                            <i class="ph-bold ph-caret-down text-sm"></i>
+                        </div>
+                        <p class="text-sm text-red-100 mt-1 truncate max-w-sm">Jl. Jenderal Sudirman No.1, Prapatan, Kec. Balikpapan Kota...</p>
+                    </div>
+
+                    <!-- Search Bar -->
+                    <div class="flex gap-2 items-center justify-end">
+                        <div class="relative flex-1 max-w-md">
+                            <i class="ph-bold ph-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 text-lg"></i>
+                            <input type="text" placeholder="carikan saya skin care" class="w-full py-2.5 pl-10 pr-4 rounded-xl text-gray-800 focus:outline-none text-sm shadow-inner">
+                        </div>
+                        <button class="border border-white/40 p-2.5 rounded-xl text-white hover:bg-white/20 transition">
+                            <i class="ph-bold ph-scan text-lg"></i>
+                        </button>
+                        <button class="border border-white/40 p-2.5 rounded-xl text-white hover:bg-white/20 transition">
+                            <i class="ph-fill ph-heart text-lg"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Membership Card (Overlapping) -->
+        <div class="px-4 md:px-8 -mt-10 relative z-10 max-w-3xl mx-auto">
+            <div class="bg-white rounded-2xl shadow-lg border-t-[6px] border-purple-600 overflow-hidden">
+                <div class="bg-gradient-to-r from-purple-800 to-purple-500 px-4 py-3 flex justify-between items-center text-white cursor-pointer hover:brightness-110 transition">
+                    <h3 class="font-bold">Hai, user</h3>
+                    <div class="flex items-center gap-1 text-sm bg-black/20 px-2 py-1 rounded-full">
+                        <i class="ph-fill ph-gift text-purple-200"></i>
+                        <span>VIP Member</span>
+                        <i class="ph-bold ph-caret-right text-xs"></i>
+                    </div>
+                </div>
+                
+                <div class="p-4 flex justify-between md:justify-around text-center border-b border-gray-100">
+                    <div class="cursor-pointer hover:scale-105 transition-transform">
+                        <div class="flex items-center gap-1 justify-center mb-1">
+                            <i class="ph-fill ph-coin text-orange-400 text-lg"></i>
+                            <span class="font-bold text-gray-800">1.000.000</span>
+                        </div>
+                        <p class="text-xs text-blue-600">Tukar A-Poin</p>
+                    </div>
+                    <div class="w-px bg-gray-200 hidden md:block"></div>
+                    <div class="cursor-pointer hover:scale-105 transition-transform">
+                        <div class="flex items-center gap-1 justify-center mb-1">
+                            <i class="ph-fill ph-ticket text-orange-400 text-lg"></i>
+                            <span class="font-bold text-gray-800">777</span>
+                        </div>
+                        <p class="text-xs text-blue-600">Voucher</p>
+                    </div>
+                    <div class="w-px bg-gray-200 hidden md:block"></div>
+                    <div class="cursor-pointer hover:scale-105 transition-transform">
+                        <div class="flex items-center gap-1 justify-center mb-1">
+                            <i class="ph-fill ph-stamp text-orange-400 text-lg"></i>
+                            <span class="font-bold text-gray-800">777</span>
+                        </div>
+                        <p class="text-xs text-blue-600">Stamp</p>
+                    </div>
+                    <div class="w-px bg-gray-200 hidden md:block"></div>
+                    <div class="cursor-pointer hover:scale-105 transition-transform">
+                        <div class="flex items-center gap-1 justify-center mb-1">
+                            <i class="ph-fill ph-star text-orange-400 text-lg"></i>
+                            <span class="font-bold text-gray-800">10</span>
+                        </div>
+                        <p class="text-xs text-blue-600">Star</p>
+                    </div>
+                </div>
+                
+                <div class="p-4 bg-yellow-50/50">
+                    <button class="w-full py-2 flex items-center justify-center gap-2 text-blue-700 font-bold border border-blue-200 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors">
+                        <i class="ph-bold ph-barcode text-xl"></i>
+                        Barcode Member
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image Slider Area -->
+        <div class="mt-8 px-4 md:px-8 max-w-5xl mx-auto">
+            <div id="slider-container" class="flex overflow-x-auto gap-4 snap-x snap-mandatory hide-scrollbar pb-2 scroll-smooth">
+                <img src="slider 1.png" alt="Promo 1" class="slide w-[85%] md:w-1/2 lg:w-1/3 object-cover rounded-xl shadow-sm snap-center shrink-0 cursor-pointer hover:brightness-95 transition">
+                <img src="slider 2.png" alt="Promo 2" class="slide w-[85%] md:w-1/2 lg:w-1/3 object-cover rounded-xl shadow-sm snap-center shrink-0 cursor-pointer hover:brightness-95 transition">
+                <img src="slider 3.png" alt="Promo 3" class="slide w-[85%] md:w-1/2 lg:w-1/3 object-cover rounded-xl shadow-sm snap-center shrink-0 cursor-pointer hover:brightness-95 transition">
+                <img src="slider 4.png" alt="Promo 4" class="slide w-[85%] md:w-1/2 lg:w-1/3 object-cover rounded-xl shadow-sm snap-center shrink-0 cursor-pointer hover:brightness-95 transition">
+                <img src="slider 5.png" alt="Promo 5" class="slide w-[85%] md:w-1/2 lg:w-1/3 object-cover rounded-xl shadow-sm snap-center shrink-0 cursor-pointer hover:brightness-95 transition">
+            </div>
+            
+            <div class="flex justify-between items-center mt-4">
+                <div class="flex gap-2 pl-1">
+                    <button class="dot w-2 h-2 rounded-full bg-blue-600 transition-colors duration-300"></button>
+                    <button class="dot w-2 h-2 rounded-full bg-gray-300 transition-colors duration-300"></button>
+                    <button class="dot w-2 h-2 rounded-full bg-gray-300 transition-colors duration-300"></button>
+                    <button class="dot w-2 h-2 rounded-full bg-gray-300 transition-colors duration-300"></button>
+                    <button class="dot w-2 h-2 rounded-full bg-gray-300 transition-colors duration-300"></button>
+                </div>
+                <a href="#" class="text-blue-700 font-bold text-sm hover:underline">Lihat semua promo</a>
+            </div>
+        </div>
+
+        <!-- Menu Icons Grid (Centered for Desktop) -->
+        <div class="mt-8 px-4 md:px-8 max-w-4xl mx-auto">
+            <div class="flex justify-around md:justify-center md:gap-16 flex-wrap gap-y-6">
+                <div class="flex flex-col items-center gap-2 group w-20">
+                    <div class="w-12 h-12 md:w-14 md:h-14 bg-white rounded-full flex items-center justify-center shadow border border-gray-100 text-purple-600 group-hover:scale-110 group-hover:shadow-md transition-all cursor-pointer">
+                        <i class="ph-fill ph-storefront text-2xl md:text-3xl"></i>
+                    </div>
+                    <span class="text-[11px] md:text-sm text-gray-700 text-center leading-tight font-medium">Produk Online</span>
+                </div>
+                <div class="flex flex-col items-center gap-2 group w-20">
+                    <div class="w-12 h-12 md:w-14 md:h-14 bg-white rounded-full flex items-center justify-center shadow border border-gray-100 text-red-500 group-hover:scale-110 group-hover:shadow-md transition-all cursor-pointer">
+                        <i class="ph-fill ph-video-camera text-2xl md:text-3xl"></i>
+                    </div>
+                    <span class="text-[11px] md:text-sm text-gray-700 text-center leading-tight font-medium">Live Stream</span>
+                </div>
+                <div class="flex flex-col items-center gap-2 group w-20">
+                    <div class="w-12 h-12 md:w-14 md:h-14 bg-white rounded-full flex items-center justify-center shadow border border-gray-100 text-orange-500 group-hover:scale-110 group-hover:shadow-md transition-all cursor-pointer">
+                        <i class="ph-fill ph-thumbs-up text-2xl md:text-3xl"></i>
+                    </div>
+                    <span class="text-[11px] md:text-sm text-gray-700 text-center leading-tight font-medium">Murah Sejagat</span>
+                </div>
+                <div class="flex flex-col items-center gap-2 group w-20">
+                    <div class="w-12 h-12 md:w-14 md:h-14 bg-white rounded-full flex items-center justify-center shadow border border-gray-100 text-blue-500 group-hover:scale-110 group-hover:shadow-md transition-all cursor-pointer">
+                        <i class="ph-fill ph-device-mobile text-2xl md:text-3xl"></i>
+                    </div>
+                    <span class="text-[11px] md:text-sm text-gray-700 text-center leading-tight font-medium">Isi Tagihan</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- NEW SECTION: Catalog Product -->
+        <div id="catalog-product" class="mt-12 px-4 md:px-8 mb-12 max-w-6xl mx-auto">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="font-bold text-gray-800 text-lg md:text-xl border-l-4 border-red-500 pl-3">Katalog Belanja</h2>
+                <!-- <a href="#" class="text-blue-700 font-bold text-sm md:text-base hover:underline flex items-center gap-1">
+                    Lihat Semua <i class="ph-bold ph-arrow-right"></i>
+                </a> -->
+            </div>
+
+            <!-- Grid: 2 cols on mobile (sm), 4 cols on desktop (md), 5/6 on large screens -->
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 md:gap-5">
+                
+                <!-- Product Card 1 -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-3 flex flex-col hover:-translate-y-1 hover:shadow-lg transition-all cursor-pointer group">
+                    <div class="w-full h-28 md:h-36 mb-3 relative flex justify-center items-center overflow-hidden">
+                        <img src="Catalog/01_Sania_Minyak_Goreng.png" alt="Sania Minyak Goreng" class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="flex flex-col flex-1 justify-end">
+                        <span class="text-[10px] md:text-xs text-gray-400 line-through">Rp 27.600</span>
+                        <div class="bg-yellow-300 rounded px-1.5 py-0.5 w-fit mt-0.5 shadow-sm">
+                            <span class="text-xs md:text-sm font-bold text-red-600">Rp 24.100</span>
+                        </div>
+                        <h3 class="text-xs md:text-sm font-medium text-gray-800 mt-2 leading-snug line-clamp-2">Sania Minyak Goreng Pouch 2L</h3>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-3 flex flex-col hover:-translate-y-1 hover:shadow-lg transition-all cursor-pointer group">
+                    <div class="w-full h-28 md:h-36 mb-3 relative flex justify-center items-center overflow-hidden">
+                        <img src="Catalog/04_Sunco_Minyak_Goreng.png" alt="SunCo Minyak Goreng" class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="flex flex-col flex-1 justify-end">
+                        <span class="text-[10px] md:text-xs text-gray-400 line-through">Rp 29.000</span>
+                        <div class="bg-yellow-300 rounded px-1.5 py-0.5 w-fit mt-0.5 shadow-sm">
+                            <span class="text-xs md:text-sm font-bold text-red-600">Rp 24.900</span>
+                        </div>
+                        <h3 class="text-xs md:text-sm font-medium text-gray-800 mt-2 leading-snug line-clamp-2">SunCo Minyak Goreng Pouch 2L</h3>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-3 flex flex-col hover:-translate-y-1 hover:shadow-lg transition-all cursor-pointer group">
+                    <div class="w-full h-28 md:h-36 mb-3 relative flex justify-center items-center overflow-hidden">
+                        <img src="Catalog/02_Fortune_Minyak_Goreng.png" alt="Fortune Minyak Goreng" class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="flex flex-col flex-1 justify-end">
+                        <span class="text-[10px] md:text-xs text-gray-400 line-through">Rp 27.400</span>
+                        <div class="bg-yellow-300 rounded px-1.5 py-0.5 w-fit mt-0.5 shadow-sm">
+                            <span class="text-xs md:text-sm font-bold text-red-600">Rp 24.100</span>
+                        </div>
+                        <h3 class="text-xs md:text-sm font-medium text-gray-800 mt-2 leading-snug line-clamp-2">Fortune Minyak Goreng Pouch 2L</h3>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-3 flex flex-col hover:-translate-y-1 hover:shadow-lg transition-all cursor-pointer group">
+                    <div class="w-full h-28 md:h-36 mb-3 relative flex justify-center items-center overflow-hidden">
+                        <img src="Catalog/03_Tropical_Minyak_Goreng.png" alt="Tropical Minyak Goreng" class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="flex flex-col flex-1 justify-end">
+                        <span class="text-[10px] md:text-xs text-gray-400 line-through">Rp 27.700</span>
+                        <div class="bg-yellow-300 rounded px-1.5 py-0.5 w-fit mt-0.5 shadow-sm">
+                            <span class="text-xs md:text-sm font-bold text-red-600">Rp 24.800</span>
+                        </div>
+                        <h3 class="text-xs md:text-sm font-medium text-gray-800 mt-2 leading-snug line-clamp-2">Tropical Minyak Goreng PET 2L</h3>
+                    </div>
+                </div>
+
+                <!-- Product Card 5 -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-3 flex flex-col hover:-translate-y-1 hover:shadow-lg transition-all cursor-pointer group">
+                    <div class="w-full h-28 md:h-36 mb-3 relative flex justify-center items-center overflow-hidden">
+                        <img src="Catalog/05_Barco_Minyak_Goreng.png" alt="Barco Minyak Goreng" class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="flex flex-col flex-1 justify-end">
+                        <span class="text-[10px] md:text-xs text-gray-400 line-through">Rp 32.900</span>
+                        <div class="bg-yellow-300 rounded px-1.5 py-0.5 w-fit mt-0.5 shadow-sm">
+                            <span class="text-xs md:text-sm font-bold text-red-600">Rp 27.900</span>
+                        </div>
+                        <h3 class="text-xs md:text-sm font-medium text-gray-800 mt-2 leading-snug line-clamp-2">Barco Minyak Goreng Pouch 1L</h3>
+                    </div>
+                </div>
+
+                <!-- Product Card 6 -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-3 flex flex-col hover:-translate-y-1 hover:shadow-lg transition-all cursor-pointer group">
+                    <div class="w-full h-28 md:h-36 mb-3 relative flex justify-center items-center overflow-hidden">
+                        <img src="Catalog/06_BonCabe_Makaroni_Brispi.png" alt="BonCabe Makaroni" class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="flex flex-col flex-1 justify-end">
+                        <span class="text-[10px] md:text-xs text-gray-400 line-through">Rp 17.300</span>
+                        <div class="bg-yellow-300 rounded px-1.5 py-0.5 w-fit mt-0.5 shadow-sm">
+                            <span class="text-xs md:text-sm font-bold text-red-600">Rp 7.500</span>
+                        </div>
+                        <h3 class="text-xs md:text-sm font-medium text-gray-800 mt-2 leading-snug line-clamp-2">BonCabe Makaroni Krispi</h3>
+                    </div>
+                </div>
+
+                <!-- Product Card 7 -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-3 flex flex-col hover:-translate-y-1 hover:shadow-lg transition-all cursor-pointer group">
+                    <div class="w-full h-28 md:h-36 mb-3 relative flex justify-center items-center overflow-hidden">
+                        <img src="Catalog/13_Taro_Net_B.png" alt="Taro Net" class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="flex flex-col flex-1 justify-end">
+                        <div class="bg-yellow-300 rounded px-1.5 py-0.5 w-fit mt-0.5 shadow-sm">
+                            <span class="text-xs md:text-sm font-bold text-red-600">Rp 12.900</span>
+                        </div>
+                        <h3 class="text-xs md:text-sm font-medium text-gray-800 mt-2 leading-snug line-clamp-2">Taro Net Snack Rumput Laut</h3>
+                    </div>
+                </div>
+
+                <!-- Product Card 8 -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-3 flex flex-col hover:-translate-y-1 hover:shadow-lg transition-all cursor-pointer group">
+                    <div class="w-full h-28 md:h-36 mb-3 relative flex justify-center items-center overflow-hidden">
+                        <img src="Catalog/15_Qtela_Biru.png" alt="Qtela" class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="flex flex-col flex-1 justify-end">
+                        <div class="bg-yellow-300 rounded px-1.5 py-0.5 w-fit mt-0.5 shadow-sm">
+                            <span class="text-xs md:text-sm font-bold text-red-600">Rp 14.500</span>
+                        </div>
+                        <h3 class="text-xs md:text-sm font-medium text-gray-800 mt-2 leading-snug line-clamp-2">Qtela Keripik Singkong Original</h3>
+                    </div>
+                </div>
+
+                <!-- Product Card 9 -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-3 flex flex-col hover:-translate-y-1 hover:shadow-lg transition-all cursor-pointer group">
+                    <div class="w-full h-28 md:h-36 mb-3 relative flex justify-center items-center overflow-hidden">
+                        <img src="Catalog/07_HappyTos.png" alt="HappyTos" class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="flex flex-col flex-1 justify-end">
+                        <div class="bg-yellow-300 rounded px-1.5 py-0.5 w-fit mt-0.5 shadow-sm">
+                            <span class="text-xs md:text-sm font-bold text-red-600">Rp 10.000</span>
+                        </div>
+                        <h3 class="text-xs md:text-sm font-medium text-gray-800 mt-2 leading-snug line-clamp-2">HappyTos Merah Roasted Corn</h3>
+                    </div>
+                </div>
+                
+                <!-- Product Card 10 -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-3 flex flex-col hover:-translate-y-1 hover:shadow-lg transition-all cursor-pointer group">
+                    <div class="w-full h-28 md:h-36 mb-3 relative flex justify-center items-center overflow-hidden">
+                        <img src="Catalog/09_TosTos_Biru.png" alt="TosTos Biru" class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="flex flex-col flex-1 justify-end">
+                        <div class="bg-yellow-300 rounded px-1.5 py-0.5 w-fit mt-0.5 shadow-sm">
+                            <span class="text-xs md:text-sm font-bold text-red-600">Rp 10.000</span>
+                        </div>
+                        <h3 class="text-xs md:text-sm font-medium text-gray-800 mt-2 leading-snug line-clamp-2">TosTos Chips Biru Korean BBQ</h3>
+                    </div>
+                </div>
+                
+                <!-- Product Card 11 -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-3 flex flex-col hover:-translate-y-1 hover:shadow-lg transition-all cursor-pointer group">
+                    <div class="w-full h-28 md:h-36 mb-3 relative flex justify-center items-center overflow-hidden">
+                        <img src="Catalog/10_Piattos_Sapi_Panggang.png" alt="Piattos" class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="flex flex-col flex-1 justify-end">
+                        <div class="bg-yellow-300 rounded px-1.5 py-0.5 w-fit mt-0.5 shadow-sm">
+                            <span class="text-xs md:text-sm font-bold text-red-600">Rp 12.000</span>
+                        </div>
+                        <h3 class="text-xs md:text-sm font-medium text-gray-800 mt-2 leading-snug line-clamp-2">Piattos Rasa Sapi Panggang</h3>
+                    </div>
+                </div>
+
+                <!-- Product Card 12 -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-3 flex flex-col hover:-translate-y-1 hover:shadow-lg transition-all cursor-pointer group">
+                    <div class="w-full h-28 md:h-36 mb-3 relative flex justify-center items-center overflow-hidden">
+                        <img src="Catalog/14_Twistko.png" alt="Twistko" class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="flex flex-col flex-1 justify-end">
+                        <span class="text-[10px] md:text-xs text-gray-400 line-through">Rp 15.500</span>
+                        <div class="bg-yellow-300 rounded px-1.5 py-0.5 w-fit mt-0.5 shadow-sm">
+                            <span class="text-xs md:text-sm font-bold text-red-600">Rp 14.400</span>
+                        </div>
+                        <h3 class="text-xs md:text-sm font-medium text-gray-800 mt-2 leading-snug line-clamp-2">Twistko Rasa Jagung Bakar</h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Sticky Bottom Navigation (Centered constraint for desktop) -->
+        <div class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 shadow-[0_-4px_15px_-3px_rgba(0,0,0,0.05)] z-50">
+            <div class="max-w-3xl mx-auto flex justify-between md:justify-around items-center px-6 md:px-12 py-3">
+                <a href="#" class="flex flex-col items-center text-red-600 gap-1 hover:scale-110 transition-transform">
+                    <i class="ph-fill ph-house text-2xl md:text-3xl"></i>
+                    <span class="text-[10px] md:text-xs font-bold">Beranda</span>
+                </a>
+                <a href="#catalog-product" class="flex flex-col items-center text-gray-400 hover:text-red-500 gap-1 hover:scale-110 transition-all">
+                    <i class="ph-fill ph-shopping-bag text-2xl md:text-3xl"></i>
+                    <span class="text-[10px] md:text-xs font-medium">Belanja</span>
+                </a>
+                <a href="#" class="flex flex-col items-center text-gray-400 hover:text-red-500 gap-1 hover:scale-110 transition-all">
+                    <i class="ph-fill ph-tag text-2xl md:text-3xl"></i>
+                    <span class="text-[10px] md:text-xs font-medium">Promo</span>
+                </a>
+                <a href="#" class="flex flex-col items-center text-gray-400 hover:text-red-500 gap-1 hover:scale-110 transition-all">
+                    <i class="ph-fill ph-receipt text-2xl md:text-3xl"></i>
+                    <span class="text-[10px] md:text-xs font-medium">Pesanan</span>
+                </a>
+                <a href="#" class="flex flex-col items-center text-gray-400 hover:text-red-500 gap-1 hover:scale-110 transition-all">
+                    <div class="relative">
+                        <i class="ph-fill ph-user text-2xl md:text-3xl"></i>
+                        <span class="absolute top-0 right-0 w-2.5 h-2.5 bg-red-500 border-2 border-white rounded-full"></span>
+                    </div>
+                    <span class="text-[10px] md:text-xs font-medium">Akun</span>
+                </a>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Full Image Modal -->
+    <div id="image-modal" class="fixed inset-0 z-[100] hidden bg-black/90 flex justify-center items-center opacity-0 transition-opacity duration-300">
+        <button id="close-modal" class="absolute top-6 right-6 text-white bg-black/50 hover:bg-black/80 rounded-full p-2 transition z-[101]">
+            <i class="ph-bold ph-x text-2xl"></i>
+        </button>
+        <img id="full-image" src="" alt="Full size" class="max-w-[95%] max-h-[90%] object-contain rounded-xl scale-95 transition-transform duration-300">
+    </div>
+
+    <!-- JavaScript for Slider & Modal Functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('slider-container');
+            const slides = document.querySelectorAll('.slide');
+            const dots = document.querySelectorAll('.dot');
+            const modal = document.getElementById('image-modal');
+            const modalImg = document.getElementById('full-image');
+            const closeBtn = document.getElementById('close-modal');
+            
+            let currentIndex = 0;
+            let autoPlayInterval;
+
+            const updateDots = (activeIndex) => {
+                dots.forEach((dot, index) => {
+                    if (index === activeIndex) {
+                        dot.classList.remove('bg-gray-300');
+                        dot.classList.add('bg-blue-600');
+                    } else {
+                        dot.classList.remove('bg-blue-600');
+                        dot.classList.add('bg-gray-300');
+                    }
+                });
+            };
+
+            const scrollToSlide = (index) => {
+                const slideOffset = slides[index].offsetLeft;
+                container.scrollTo({
+                    left: slideOffset - container.offsetLeft,
+                    behavior: 'smooth'
+                });
+            };
+
+            const startAutoPlay = () => {
+                autoPlayInterval = setInterval(() => {
+                    currentIndex = (currentIndex + 1) % slides.length;
+                    scrollToSlide(currentIndex);
+                }, 5000);
+            };
+
+            const stopAutoPlay = () => {
+                clearInterval(autoPlayInterval);
+            };
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    stopAutoPlay();
+                    currentIndex = index;
+                    scrollToSlide(currentIndex);
+                    startAutoPlay();
+                });
+            });
+
+            const observerOptions = {
+                root: container,
+                threshold: 0.5 
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        currentIndex = Array.from(slides).indexOf(entry.target);
+                        updateDots(currentIndex);
+                    }
+                });
+            }, observerOptions);
+
+            slides.forEach(slide => observer.observe(slide));
+
+            const openModal = (src) => {
+                modalImg.src = src;
+                modal.classList.remove('hidden');
+                stopAutoPlay();
+
+                setTimeout(() => {
+                    modal.classList.remove('opacity-0');
+                    modalImg.classList.remove('scale-95');
+                    modalImg.classList.add('scale-100');
+                }, 10);
+            };
+
+            const closeModal = () => {
+                modal.classList.add('opacity-0');
+                modalImg.classList.remove('scale-100');
+                modalImg.classList.add('scale-95');
+                
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                    startAutoPlay();
+                }, 300);
+            };
+
+            slides.forEach(slide => {
+                slide.addEventListener('click', () => {
+                    openModal(slide.src);
+                });
+            });
+
+            closeBtn.addEventListener('click', closeModal);
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+
+            startAutoPlay();
+        });
+    </script>
+</body>
+</html>
